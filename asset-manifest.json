@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_toolkit_todo/static/css/main.7acaea2f.css",
+    "main.js": "/react_toolkit_todo/static/js/main.07d3183d.js",
+    "index.html": "/react_toolkit_todo/index.html",
+    "main.7acaea2f.css.map": "/react_toolkit_todo/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/react_toolkit_todo/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
