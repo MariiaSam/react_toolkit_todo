@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react_toolkit_todo/static/css/main.22d3f43f.css",
-    "main.js": "/react_toolkit_todo/static/js/main.38e196f0.js",
+    "main.css": "/react_toolkit_todo/static/css/main.abe695db.css",
+    "main.js": "/react_toolkit_todo/static/js/main.ee4cdd33.js",
     "index.html": "/react_toolkit_todo/index.html",
-    "main.22d3f43f.css.map": "/react_toolkit_todo/static/css/main.22d3f43f.css.map",
-    "main.38e196f0.js.map": "/react_toolkit_todo/static/js/main.38e196f0.js.map"
+    "main.abe695db.css.map": "/react_toolkit_todo/static/css/main.abe695db.css.map",
+    "main.ee4cdd33.js.map": "/react_toolkit_todo/static/js/main.ee4cdd33.js.map"
   },
   "entrypoints": [
-    "static/css/main.22d3f43f.css",
-    "static/js/main.38e196f0.js"
+    "static/css/main.abe695db.css",
+    "static/js/main.ee4cdd33.js"
   ]
 }
