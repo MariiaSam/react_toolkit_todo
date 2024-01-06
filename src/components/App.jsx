@@ -1,50 +1,43 @@
-import { nanoid } from '@reduxjs/toolkit';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from 'store/todoSlice';
+
+
 import TodoList from './TodoList';
 import InputField from './InputField';
 
-export const App = () => {
-  const [todos, setTodos] = useState([]);
-  const [text, setText] = useState('');
+export function App () {
+  const [text, setText] = useState(''); 
+  const dispatch = useDispatch()
 
-  const addTodo = () => {
-    if (text.trim().length) {
-      setTodos([
-        ...todos,
-        {
-          id: nanoid(),
-          text,
-          completed: false, // тсатус
-        },
-      ]);
-      setText(''); // після  додавання тудушки, кидається текст на пустий рядок
-    }
+  const addTask = () => {
+    dispatch(addTodo({ text }));
+    setText('');
   };
+
   const toggleTodoCompleted = todoId => {
-    setTodos(
-      todos.map(todo => {
-        if (todo.id !== todoId) return todo;
+    // setTodos(
+    //   todos.map(todo => {
+    //     if (todo.id !== todoId) return todo;
+    //     return {
+    //       ...todo,
+    //       completed: !todo.completed,
+    //     };
+    //   })
+    // );
+}
+   
 
-        return {
-          ...todo,
-          completed: !todo.completed,
-        };
-      })
-    );
-  };
 
-  const removeTodo = todoId => {
-    setTodos(todos.filter(todo => todo.id !== todoId)); //ідентифікатор не дорівнює, що ми отримуєм у ф-ції
-  };
+  // const removeTodo = todoId => {
+  //   // setTodos(todos.filter(todo => todo.id !== todoId)); //ідентифікатор не дорівнює, що ми отримуєм у ф-ції
+  // };
 
   return (
     <div className="App">
-      <InputField text={text} handlerInput={setText} handlerSubmit={addTodo}/>
-      <TodoList
-        todos={todos}
-        toggleTodoCompleted={toggleTodoCompleted}
-        removeTodo={removeTodo}
-      />
+      <InputField text={text} handlerInput={setText} handlerSubmit={addTask} />
+      <TodoList />
     </div>
   );
-};
+}
+

@@ -1,4 +1,9 @@
+import { useDispatch } from "react-redux";
+
+
 const TodoItem = ({ id, text, completed, removeTodo, toggleTodoCompleted }) => {
+  const dispatch = useDispatch()
+
   return (
     <li>
       <input
@@ -7,9 +12,9 @@ const TodoItem = ({ id, text, completed, removeTodo, toggleTodoCompleted }) => {
         onChange={() => toggleTodoCompleted(id)}
       />
       <span>{text}</span>
-      <span className="delete" onClick={() => removeTodo(id)}>
-        &times;
-      </span>
+      <span className="delete" onClick={() => dispatch()}>
+  &times;
+</span>
     </li>
   );
 };
