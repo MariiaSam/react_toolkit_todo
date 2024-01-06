@@ -12,7 +12,7 @@ const TodoItem = ({ id, text, completed }) => {
         checked={completed}
         onChange={() => dispatch(toggleTodoCompleted({ id }))}
       />
-      <span>{text}</span>
+      <span className='spanText'>{text}</span>
       <span className="delete" onClick={() => dispatch(removeTodo({ id }))}>
         &times;
       </span>
