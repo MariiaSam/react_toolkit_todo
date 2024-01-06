@@ -8,3 +8,5 @@ export default configureStore({
         
     }
 })
+
+// за допомогою configureStore  створюється store;

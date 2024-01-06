@@ -15,3 +15,5 @@ const TodoList = () => {
 };
 
 export default TodoList;
+
+// useSelector, якщо потрібні дані з глобального сховища

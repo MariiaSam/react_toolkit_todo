@@ -15,20 +15,8 @@ export function App () {
     setText('');
   };
 
-  const toggleTodoCompleted = todoId => {
-    // setTodos(
-    //   todos.map(todo => {
-    //     if (todo.id !== todoId) return todo;
-    //     return {
-    //       ...todo,
-    //       completed: !todo.completed,
-    //     };
-    //   })
-    // );
-}
-   
 
-
+  
   // const removeTodo = todoId => {
   //   // setTodos(todos.filter(todo => todo.id !== todoId)); //ідентифікатор не дорівнює, що ми отримуєм у ф-ції
   // };
