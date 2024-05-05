@@ -1,0 +1,34 @@
+.buttonForm {
+    width: 344px;
+    height: 49px;
+    margin-top: 24px;
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border: none;
+    border-radius: 8px;
+  
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 21px;
+  
+    color: #161616;
+    background-color: #bedbb0;
+
+  
+  }
+  
+  .buttonForm:hover,
+  .buttonForm:focus {
+    background-color:  #9dc888;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .buttonForm {
+      width: 287px;
+    }
+  }
+  

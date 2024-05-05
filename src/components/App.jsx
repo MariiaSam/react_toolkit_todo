@@ -6,6 +6,8 @@ import { addTodo } from 'store/todoSlice';
 import TodoList from './TodoList';
 import InputField from './InputField';
 
+import FormButton from './Button/FormButton';
+
 export function App () {
   const [text, setText] = useState(''); 
   const dispatch = useDispatch()
@@ -25,6 +27,8 @@ export function App () {
     <div className="App">
       <InputField text={text} handlerInput={setText} handlerSubmit={addTask} />
       <TodoList />
+
+      <FormButton/>
     </div>
   );
 }
