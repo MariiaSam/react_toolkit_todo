@@ -7,6 +7,7 @@ import TodoList from './TodoList';
 import InputField from './InputField';
 
 import FormButton from './Button/FormButton';
+import RadioFilters from './RadioButton/RadioFilters/RadioFilters';
 
 export function App () {
   const [text, setText] = useState(''); 
@@ -29,6 +30,8 @@ export function App () {
       <TodoList />
 
       <FormButton/>
+      <RadioFilters/>
+
     </div>
   );
 }
