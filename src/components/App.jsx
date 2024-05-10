@@ -8,6 +8,11 @@ import InputField from './InputField';
 
 import FormButton from './Button/FormButton';
 import RadioFilters from './RadioButton/RadioFilters/RadioFilters';
+import RadioColorCard from './RadioButton/RadioColor/RadioColorCard';
+
+// import Calendar from './Calendar/Calendar';
+
+import Calendar from '1/Calendar';
 
 export function App () {
   const [text, setText] = useState(''); 
@@ -30,7 +35,12 @@ export function App () {
       <TodoList />
 
       <FormButton/>
-      <RadioFilters/>
+      <RadioFilters></RadioFilters>
+      <RadioColorCard></RadioColorCard>
+      {/* <Calendar></Calendar> */}
+      <Calendar></Calendar>
+   
+
 
     </div>
   );
