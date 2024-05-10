@@ -1,0 +1,76 @@
+  background-color:
+  calendar-background-color:  ##1f1f1f;; 
+  calendar-background-color: #fff; 
+  calendar-background-color: #fff;
+
+color:
+calendar-text-color: #fff;
+calendar-text-color: #161616;;
+calendar-text-color: #161616;;
+
++++++++++++++++++++
+
+input:
+color
+calendar-input: #bedbb0;
+calendar-input: #bedbb0;
+calendar-input: #5255bc;
+
++++++++++++++++++++
+
+current-month
+border-bottom:
+calendar-month: rgba(255, 255, 255, 0.5)
+calendar-month: rgba(22, 22, 22, 0.5);
+calendar-month: rgba(22, 22, 22, 0.5;
++++++++++++++++++++
+
+day-name:
+color:
+calendar-day: rgba(255, 255, 255, 0.5);
+calendar-day:  rgba(255, 255, 255, 0.5);
+calendar-day: #fff;;
++++++++++++++++++++
+
+
+navigation
+border-color:
+calendar-navigation: #bedbb0;
+calendar-navigation: #bedbb0;
+calendar-navigation: #5255bc;
+
++++++++++++++++++++
+
+day:hover:
+outline:
+calendar-day: #fff;
+calendar-day: #161616;;
+calendar-day: #161616;;
++++++++++++++++++++
+
+
+day:selected:
+background
+calendar-day-hover:  #bedbb0;;
+calendar-day-hover:  #bedbb0;;
+calendar-day-hover:  #5255bc;
+
+color: 
+calendar-active-day:  #1F1F1F;
+calendar-active-day:  #161616;
+calendar-active-day:  #FCFCFC;
+
++++++++++++++++++++
+
+day--selected:hover
+outline
+calendar-day-selected  #fff;;
+calendar-day-selected  #161616;
+calendar-day-selected  #161616;
+
+day--selected:hover
+background:
+calendar-day-selected-background: #bedbb0;
+calendar-day-selected-background: #bedbb0;
+calendar-day-selected-background: #5255bc;
+

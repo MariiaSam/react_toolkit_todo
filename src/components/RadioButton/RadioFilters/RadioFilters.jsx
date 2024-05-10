@@ -1,12 +1,14 @@
+import React, { useState } from 'react';
 import { Box, FormControlLabel, Radio, RadioGroup } from '@mui/material';
-// import css from './RadioFilters.module.css';
 
-const RadioFilters = ({ onFilterChange, onClick }) => {
+const RadioFilters = ({ onFilterChange, priority }) => {
+  const [selectedValue, setSelectedValue] = useState(priority || 'Without');
+
   const radioButtons = [
     {
       value: 'Without',
       label: 'Without priority',
-      labelColor: 'rgba(255, 255, 255, 0.5)',
+      labelColor: selectedValue === 'Without' ? '#fff' : 'rgba(255, 255, 255, 0.5)',
       radioColor: {
         static: 'rgba(22, 22, 22, 0.3)',
         onChecked: 'rgba(22, 22, 22, 0.3)',
@@ -15,31 +17,40 @@ const RadioFilters = ({ onFilterChange, onClick }) => {
     {
       value: 'Low',
       label: 'Low',
-      labelColor: 'rgba(255, 255, 255, 0.5)',
+      labelColor: selectedValue === 'Low' ? '#fff' : 'rgba(255, 255, 255, 0.5)',
       radioColor: {
         static: '#8fa1d0',
         onChecked: '#151512',
       },
     },
     {
-      value: 'Medium',
-      label: 'Medium',
-      labelColor: 'rgba(255, 255, 255, 0.5)',
+      value: "High",
+      label: 'High',
+      labelColor: selectedValue === 'High' ? '#FFF' : 'rgba(255, 255, 255, 0.5)',
       radioColor: {
-        static: '#e09cb5;',
+        static: 'pink',
         onChecked: '#151512',
       },
     },
     {
-      value: 'High',
-      label: 'High',
-      labelColor: 'rgba(255, 255, 255, 0.5)',
+      value: "Medium",
+      label: 'Medium',
+      labelColor: selectedValue === 'Medium' ? '#FFF' : 'rgba(255, 255, 255, 0.5)',
       radioColor: {
-        static: '#bedbb0',
-        onChecked: ' #161616',
+        static: 'green',
+        onChecked: '#151512',
       },
     },
+    
+    
   ];
+
+  const handleRadioChange = (event) => {
+    const selectedPriority = event.target.value;
+    setSelectedValue(selectedPriority);
+    onFilterChange(selectedPriority);
+  };
+
   return (
     <Box
       sx={{
@@ -51,20 +62,12 @@ const RadioFilters = ({ onFilterChange, onClick }) => {
     >
       <RadioGroup
         aria-labelledby="radio-buttons-group-label"
-        defaultValue="colorFilter"
+        value={selectedValue}
         name="radio-buttons-group"
-        onChange={evt => {
-          onFilterChange(evt.target.value);
-        }}
+        onChange={handleRadioChange}
         sx={{ display: 'flex', flexDirection: 'row', gap: '8px' }}
       >
-        {/* <FormControlLabel
-          value=""
-          control={<Radio sx={{ display: 'none' }} />}
-          label={<p className={css.text}>Show all</p>}
-          onClick={onClick}
-        /> */}
-        {radioButtons.map(button => {
+        {radioButtons.map((button) => {
           const { value, label, labelColor, radioColor } = button;
           return (
             <FormControlLabel
@@ -78,13 +81,11 @@ const RadioFilters = ({ onFilterChange, onClick }) => {
                 '& .MuiTypography-root': {
                   fontFamily: 'Poppins',
                   fontSize: '12px',
-                //   letterSpacing: '-0.24px',
                   color: labelColor,
                 },
               }}
               control={
                 <Radio
-                //   onClick={onClick}
                   sx={{
                     width: '14px',
                     height: '14px',

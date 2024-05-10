@@ -1,35 +1,34 @@
+import { Box, RadioGroup, FormControlLabel, Radio } from '@mui/material';
 
-import { Box, FormControlLabel, Radio, RadioGroup } from '@mui/material';
-
-const RadioColored = ({ onRadioChange, currentPriority }) => {
-  const radioButtons = [
+const RadioColorCard = ({ onColorChange, priorityColor }) => {
+  const radio = [
     {
-      value: 'High',
+      value: 'Without',
       radioColor: {
-        static: 'var(--radio-label-green-color)',
-        checked: 'var(--radio-label-checked-background-color)',
-        additional: 'var(--radio-label-checked-background-color)',
-      },
-    },
-    {
-      value: 'Medium',
-      radioColor: {
-        static: 'var(--radio-label-pink-color)',
-        checked: 'var(--radio-label-checked-background-color)',
+        static: 'rgba(255, 255, 255, 0.5)',
+        checked: 'rgba(22, 22, 22, 0.3)',
       },
     },
     {
       value: 'Low',
       radioColor: {
-        static: 'var(--radio-label-background-color)',
-        checked: 'var(--radio-label-checked-background-color)',
+        static: '#8fa1d0',
+        checked: 'rgba(22, 22, 22, 0.3)',
       },
     },
     {
-      value: 'Without',
+      value: 'Medium',
       radioColor: {
-        static: 'var(--radio-label-grey-color)',
-        checked: 'var(--radio-label-checked-background-color)',
+        static: '#e09cb5',
+        checked: 'rgba(22, 22, 22, 0.3)',
+      },
+    },
+    {
+      value: 'High',
+      radioColor: {
+        static: '#bedbb0',
+        checked: 'rgba(22, 22, 22, 0.3)',
+        additional: 'rgba(22, 22, 22, 0.3)',
       },
     },
   ];
@@ -39,18 +38,18 @@ const RadioColored = ({ onRadioChange, currentPriority }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        width: '140px',
+        width: '100px',
       }}
     >
       <RadioGroup
-        aria-labelledby="label-changer"
-        defaultValue={currentPriority}
+        aria-labelledby="radio-buttons-group-label"
+        defaultValue={priorityColor}
         name="radio-buttons-group"
-        onChange={ev => onRadioChange(ev.target.value)}
+        onChange={evt => onColorChange(evt.target.value)}
         sx={{ display: 'flex', gap: '8px' }}
         row
       >
-        {radioButtons.map(button => {
+        {radio.map(button => {
           const { value, radioColor } = button;
           return (
             <FormControlLabel
@@ -63,11 +62,9 @@ const RadioColored = ({ onRadioChange, currentPriority }) => {
                     width: '14px',
                     height: '14px',
                     color: 'transparent',
-
                     backgroundColor: radioColor.static,
                     '&.Mui-checked': {
                       color: radioColor.static,
-
                       backgroundColor: radioColor.checked,
                     },
                   }}
@@ -82,4 +79,4 @@ const RadioColored = ({ onRadioChange, currentPriority }) => {
   );
 };
 
-export default RadioColored;
+export default RadioColorCard;
