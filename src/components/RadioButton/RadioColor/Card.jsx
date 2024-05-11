@@ -21,3 +21,8 @@ const Card = ({ currentPriority = 'Without' }) => {
 };
 
 export default Card;
+
+
+
+
+//Modal - EditCard AddCard
